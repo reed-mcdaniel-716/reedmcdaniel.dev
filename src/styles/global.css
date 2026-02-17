@@ -81,7 +81,7 @@ a.light-mode {
 }
 
 .banner {
-  background-image: url("public/images/fia-yang-iwGFr1bi2x0-unsplash.jpg");
+  background-image: url("/images/fia-yang-iwGFr1bi2x0-unsplash.jpg");
   background-size: cover;
   background-position: center;
   height: 100%;
