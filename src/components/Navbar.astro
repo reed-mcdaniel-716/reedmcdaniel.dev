@@ -1,0 +1,12 @@
+---
+interface Props {
+  theme?: 'light' | 'dark';
+}
+const { theme = 'light' } = Astro.props as Props;
+---
+<nav class={`navbar ${theme}-mode`}>
+    <ul>
+        <li><a class={`${theme}-mode`} href="/">Home</a></li>
+        <li><a class={`${theme}-mode`} href="/personal-statement">Personal Statement</a></li>
+    </ul>
+</nav>

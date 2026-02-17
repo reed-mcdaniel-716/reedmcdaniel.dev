@@ -1,0 +1,93 @@
+:root {
+  --color-silver: #a6a6a6ff;
+  --color-davys-gray: #5b5b5bff;
+  --color-white-smoke: #f2f2f2ff;
+  --color-onyx: #080808ff;
+}
+
+html,
+body {
+  height: 100%; /* Ensure html and body take the full viewport height */
+  margin: 0;
+}
+
+body {
+  font-family: "Unna", serif;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1; /* This makes the main content area grow to fill available space */
+}
+
+nav > ul,
+footer > ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+nav > ul {
+  gap: 20px;
+}
+
+footer > ul {
+  flex-direction: column;
+}
+
+nav > ul > li > a,
+footer > ul > li > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.dark-mode {
+  background-color: var(--color-onyx);
+  color: var(--color-white-smoke);
+}
+
+a.dark-mode {
+  padding: 4px;
+}
+
+.light-mode {
+  background-color: var(--color-white-smoke);
+  color: var(--color-onyx);
+}
+
+a.light-mode {
+  padding: 4px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner {
+  background-image: url("public/images/fia-yang-iwGFr1bi2x0-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.banner-content {
+  background-color: var(--color-white-smoke);
+  padding: 40px;
+}

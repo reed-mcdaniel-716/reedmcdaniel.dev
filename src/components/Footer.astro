@@ -1,0 +1,27 @@
+---
+interface Props {
+  theme?: 'light' | 'dark';
+}
+const { theme = 'light' } = Astro.props as Props;
+---
+<footer class={`${theme}-mode`}>
+    <ul>
+        <li><p>&copy; 2026 Reed McDaniel. All rights reserved.</p></li>
+        <li>
+          Homepage photo by{" "}
+          <a
+            href="https://unsplash.com/@fiayang?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+            aria-label="Photographer FÍA YANG Unsplash profile"
+          >
+            FÍA YANG
+          </a>{" "}
+          on{" "}
+          <a
+            href="https://unsplash.com/photos/a-black-and-white-photo-of-a-piece-of-art-iwGFr1bi2x0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+            aria-label="Unsplash photo page"
+          >
+            Unsplash
+          </a>
+        </li>
+    </ul>
+</footer>

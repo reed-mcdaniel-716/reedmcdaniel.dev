@@ -1,0 +1,30 @@
+---
+import '../styles/global.css';
+import "@fontsource/unna";
+import Footer from '../components/Footer.astro';
+import Navbar from '../components/Navbar.astro';
+
+interface Props {
+  title: string;
+  mainTheme?: 'light' | 'dark';
+  navTheme?: 'light' | 'dark';
+  footerTheme?: 'light' | 'dark';  
+}
+const { title, mainTheme = 'light', navTheme = 'light', footerTheme = 'light' } = Astro.props as Props;
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class={`${mainTheme}-mode`}>
+        <Navbar theme={navTheme}/>
+        <main>
+            <slot />
+        </main>
+        <Footer theme={footerTheme}/>
+  </body>
+</html>
